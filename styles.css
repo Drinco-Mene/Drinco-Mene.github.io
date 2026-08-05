@@ -5,8 +5,8 @@
   --accent:#6ee7b7;
   --accent-2:#60a5fa;
   --glass: rgba(255,255,255,0.04);
-  --radius:16px;
-  --shadow: 0 6px 20px rgba(2,6,23,0.6);
+  --radius:18px;
+  --shadow: 0 8px 30px rgba(2,6,23,0.65);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color-scheme: dark;
 }
@@ -28,22 +28,22 @@ body{
 }
 
 /* Page card */
-.page{width:100%;max-width:920px}
+.page{width:100%;max-width:980px}
 .card{
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border-radius:var(--radius);
-  padding:28px;
+  padding:32px;
   box-shadow:var(--shadow);
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:16px;
-  border:1px solid rgba(255,255,255,0.03);
+  gap:20px;
+  border:1px solid rgba(255,255,255,0.035);
 }
 
 /* Avatar */
 .avatar{
-  width:160px;height:160px;
+  width:180px;height:180px;
   border-radius:50%;
   overflow:hidden;
   display:flex;
@@ -62,81 +62,74 @@ body{
 }
 
 /* Text */
-.name{margin:0;font-weight:700;letter-spacing:0.2px}
-.role{margin:0;color:var(--muted);font-weight:500}
-.bio{max-width:720px;text-align:center;color:var(--muted);margin:8px 0 18px}
+.name{margin:0;font-weight:800;font-size:clamp(20px,2.6vw,28px);letter-spacing:0.2px}
+.role{margin:0;color:var(--muted);font-weight:600}
+.bio{max-width:760px;text-align:center;color:var(--muted);margin:8px 0 18px}
 
 /* Buttons vertical */
 .contacts{
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:16px;
   align-items:center;
   width:100%;
-  padding:4px 8px;
+  padding:6px 8px;
 }
 
 .btn{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
   color:white;
   border:1px solid rgba(255,255,255,0.04);
-  padding:14px 18px;
+  padding:18px 20px;
   border-radius:14px;
   text-decoration:none;
-  font-weight:700;
+  font-weight:800;
   display:inline-flex;
-  gap:12px;
+  gap:14px;
   align-items:center;
-  transition: transform .18s cubic-bezier(.2,.9,.3,1), box-shadow .18s, background .18s;
+  transition: transform .18s cubic-bezier(.22,.9,.25,1), box-shadow .18s, background .18s;
   will-change:transform;
-  box-shadow: 0 6px 22px rgba(2,6,23,0.55);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.6);
   width:100%;
-  max-width:520px;
+  max-width:620px;
   justify-content:flex-start;
 }
 
 /* Button icon */
-.btn-icon{width:30px;height:30px;flex:0 0 30px;display:inline-block}
-.btn-text{flex:1;text-align:left}
+.btn-icon{width:40px;height:40px;flex:0 0 40px;display:inline-block}
+.btn-text{flex:1;text-align:left;font-size:18px}
 
 /* Hover movement and playful tilt */
 .btn:hover{
-  transform: translateY(-6px) rotate(-1deg) scale(1.01);
-  box-shadow: 0 16px 40px rgba(2,6,23,0.6);
+  transform: translateY(-8px) rotate(-1deg) scale(1.015);
+  box-shadow: 0 26px 60px rgba(2,6,23,0.66);
 }
 
-/* Slight wobble when focused or keyboard hovered */
+/* Focus */
 .btn:focus{
-  outline: 3px solid rgba(96,165,250,0.18);
-  transform: translateY(-6px) rotate(0deg);
-}
-
-/* Ghost variant (não usado) */
-.btn-ghost{
-  background: transparent;
-  border: 1px dashed rgba(255,255,255,0.06);
-  color:var(--muted);
+  outline: 4px solid rgba(96,165,250,0.18);
+  transform: translateY(-6px);
 }
 
 /* Chips / footer */
 .chip{
   background: rgba(255,255,255,0.03);
-  padding:6px 10px;
+  padding:8px 12px;
   border-radius:999px;
   margin-left:6px;
-  font-weight:600;
+  font-weight:700;
   color:var(--muted);
   cursor:pointer;
 }
-.chip.lang.active{background:rgba(96,165,250,0.12);color:var(--accent-2)}
+.chip.lang.active{background:rgba(96,165,250,0.14);color:var(--accent-2)}
 
 .foot{margin-top:6px;text-align:center;width:100%}
-.small{color:var(--muted);font-size:13px;margin:6px 0 0}
+.small{color:var(--muted);font-size:13px;margin:8px 0 0}
 
 /* Responsive */
-@media (max-width:560px){
-  .avatar{width:120px;height:120px}
-  .card{padding:18px}
-  .btn{font-size:15px;padding:12px}
-  .btn-icon{width:24px;height:24px;flex:0 0 24px}
+@media (max-width:720px){
+  .avatar{width:140px;height:140px}
+  .btn{font-size:16px;padding:14px}
+  .btn-icon{width:32px;height:32px;flex:0 0 32px}
+  .btn-text{font-size:15px}
 }

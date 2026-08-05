@@ -11,7 +11,7 @@
   <main class="page">
     <section class="card">
       <div class="avatar">
-        <!-- Foto enviada no repositório com nome original -->
+        <!-- Foto enviada no repositório -->
         <img class="avatar-img" src="WhatsApp%20Image%202026-08-05%20at%2007.14.45.jpeg" alt="Foto de Drinco-Mene" />
       </div>
 
@@ -23,18 +23,31 @@
       </p>
 
       <div class="contacts">
-        <!-- Botões em linhas separadas; use os links que quiser -->
-        <a class="btn" href="mailto:seu-email@exemplo.com" aria-label="Enviar e-mail" data-key="email">📧 Email</a>
+        <!-- Botões em linhas separadas; removida a opção EA conforme solicitado -->
+        <a class="btn" href="mailto:seu-email@exemplo.com" aria-label="Enviar e-mail" data-key="email">
+          <img class="btn-icon" src="assets/email.png" alt="Email logo" onerror="this.style.display='none'">
+          <span class="btn-text">📧 Email</span>
+        </a>
 
-        <a class="btn" href="https://github.com/Drinco-Mene" target="_blank" rel="noopener" aria-label="GitHub" data-key="github">💻 GitHub</a>
+        <a class="btn" href="https://github.com/Drinco-Mene" target="_blank" rel="noopener" aria-label="GitHub" data-key="github">
+          <img class="btn-icon" src="assets/github.png" alt="GitHub logo" onerror="this.style.display='none'">
+          <span class="btn-text">💻 GitHub</span>
+        </a>
 
-        <a class="btn" href="https://account.xbox.com/pt-BR/Profile?gamertag=DrincoMene" target="_blank" rel="noopener" aria-label="Xbox" data-key="xbox">🎮 Xbox</a>
+        <a class="btn" href="https://account.xbox.com/pt-BR/Profile?gamertag=DrincoMene" target="_blank" rel="noopener" aria-label="Xbox" data-key="xbox">
+          <img class="btn-icon" src="assets/xbox.png" alt="Xbox logo" onerror="this.style.display='none'">
+          <span class="btn-text">🎮 Xbox</span>
+        </a>
 
-        <a class="btn" href="https://steamcommunity.com/id/DrincoMene/" target="_blank" rel="noopener" aria-label="Steam" data-key="steam">🕹️ Steam</a>
+        <a class="btn" href="https://steamcommunity.com/id/DrincoMene/" target="_blank" rel="noopener" aria-label="Steam" data-key="steam">
+          <img class="btn-icon" src="assets/steam.png" alt="Steam logo" onerror="this.style.display='none'">
+          <span class="btn-text">🕹️ Steam</span>
+        </a>
 
-        <a class="btn" href="https://instagram.com/ka_uadasilva" target="_blank" rel="noopener" aria-label="Instagram" data-key="instagram">📸 Instagram</a>
-
-        <a class="btn" href="https://myaccount.ea.com/" target="_blank" rel="noopener" aria-label="EA" data-key="ea">⚡ EA</a>
+        <a class="btn" href="https://instagram.com/ka_uadasilva" target="_blank" rel="noopener" aria-label="Instagram" data-key="instagram">
+          <img class="btn-icon" src="assets/instagram.png" alt="Instagram logo" onerror="this.style.display='none'">
+          <span class="btn-text">📸 Instagram</span>
+        </a>
       </div>
 
       <footer class="foot">
@@ -48,7 +61,7 @@
   </main>
 
   <script>
-    // Pequeno script para alternar idioma (pt/en) alterando textos visíveis
+    // Pequeno script para alternar idioma (pt/en)
     (function(){
       const translations = {
         pt: {
@@ -60,7 +73,6 @@
           xbox: '🎮 Xbox',
           steam: '🕹️ Steam',
           instagram: '📸 Instagram',
-          ea: '⚡ EA',
           footer: 'Feito com ❤️ — Drinco-Mene'
         },
         en: {
@@ -72,32 +84,27 @@
           xbox: '🎮 Xbox',
           steam: '🕹️ Steam',
           instagram: '📸 Instagram',
-          ea: '⚡ EA',
           footer: 'Made with ❤️ — Drinco-Mene'
         }
       };
 
       function setLanguage(lang){
         document.documentElement.lang = (lang === 'en') ? 'en' : 'pt-BR';
-        // update elements with data-key
         document.querySelectorAll('[data-key]').forEach(el => {
           const key = el.getAttribute('data-key');
           if(key && translations[lang] && translations[lang][key]){
             el.textContent = translations[lang][key];
           }
         });
-        // toggle active class on chips
         document.querySelectorAll('.chip.lang').forEach(ch => {
           ch.classList.toggle('active', ch.getAttribute('data-lang') === lang);
         });
       }
 
-      // attach click handlers
       document.querySelectorAll('.chip.lang').forEach(ch => {
         ch.addEventListener('click', () => setLanguage(ch.getAttribute('data-lang')));
       });
 
-      // default language pt
       setLanguage('pt');
     })();
   </script>
