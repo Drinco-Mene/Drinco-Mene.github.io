@@ -8,7 +8,6 @@ Uma página simples, elegante e prática para encontrar meus perfis e entrar em 
 
 ## 📬 Perfis
 
-- **📧 Email:** drincomene@gmail.com
 - **💻 GitHub:** https://github.com/Drinco-Mene
 - **🎮 Xbox:** DrincoMene
 - **🕹️ Steam:** https://steamcommunity.com/id/DrincoMene/
