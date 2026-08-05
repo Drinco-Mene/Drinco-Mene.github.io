@@ -2,31 +2,32 @@
 
 Uma página simples, elegante e prática para encontrar meus perfis e entrar em contato — feita pra ser rápida, clara e com aquela vibe leve.
 
-Visite: https://drinco-mene.github.io
+[🌐 Ver site ao vivo](https://drinco-mene.github.io)
 
 ---
 
 ## 📬 Perfis
 
-- **GitHub:** https://github.com/Drinco-Mene
-- **Xbox:** DrincoMene
-- **Steam:** https://steamcommunity.com/id/DrincoMene/
-- **Instagram:** https://instagram.com/ka_uadasilva
+- **💻 GitHub:** https://github.com/Drinco-Mene
+- **🎮 Xbox:** DrincoMene
+- **🕹️ Steam:** https://steamcommunity.com/id/DrincoMene/
+- **📸 Instagram:** https://instagram.com/ka_uadasilva
+
+---
+
+## ⚡ Destaques
+
+- Layout responsivo e leve  
+- Botões com ícones e texto centralizado  
+- Troca de tema (Dark / Light) com persistência
 
 ---
 
 ## 🛠️ Como editar
 
-- Arquivos principais: `index.html` e `styles.css`.
-- Para trocar avatar ou logos, coloque imagens na pasta `assets/`.
-- Pequenas mudanças podem ser feitas direto no GitHub (botão ✏️ ao abrir o arquivo).
-
----
-
-## 📦 Dicas
-
-- Prefira imagens quadradas para o avatar (ex.: 400×400) e nomes sem espaços (ex.: `avatar.jpg`).
-- Use PNG transparente para logos (`github.png`, `xbox.png`, `steam.png`, `instagram.png`).
+- Arquivos principais: `index.html` e `styles.css`.  
+- Para trocar avatar ou logos, coloque imagens na pasta `assets/` (nomes sem espaços).  
+- Pequenas mudanças podem ser feitas direto no GitHub (✏️).
 
 ---
 

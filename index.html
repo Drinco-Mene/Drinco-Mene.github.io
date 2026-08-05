@@ -10,8 +10,17 @@
 <body>
   <main class="page">
     <section class="card">
+      <!-- Theme toggle (top-right) -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path fill="currentColor" d="M6.76 4.84l-1.8-1.79L3.17 5.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10-9h2V1h-2v3zm7.03 1.05l1.79-1.79-1.79-1.8-1.8 1.79 1.8 1.8zM17.24 19.16l1.8 1.79 1.79-1.79-1.79-1.8-1.8 1.8zM20 13h3v-2h-3v2zM12 20a8 8 0 100-16 8 8 0 000 16z"/>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="display:none">
+          <path fill="currentColor" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+
       <div class="avatar">
-        <!-- Foto enviada no repositório -->
         <img class="avatar-img" src="WhatsApp%20Image%202026-08-05%20at%2007.14.45.jpeg" alt="Foto de Drinco-Mene" />
       </div>
 
@@ -23,35 +32,34 @@
       </p>
 
       <div class="contacts">
-        <!-- Botões em linhas separadas; removida a opção EA conforme solicitado -->
-        <a class="btn" href="mailto:seu-email@exemplo.com" aria-label="Enviar e-mail" data-key="email">
-          <img class="btn-icon" src="assets/email.png" alt="Email logo" onerror="this.style.display='none'">
+        <a class="btn" href="#" aria-label="Email" data-email="seu-email@exemplo.com">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path fill="currentColor" d="M4 4h16v16H4z" fill="none"/><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
           <span class="btn-text">📧 Email</span>
         </a>
 
-        <a class="btn" href="https://github.com/Drinco-Mene" target="_blank" rel="noopener" aria-label="GitHub" data-key="github">
-          <img class="btn-icon" src="assets/github.png" alt="GitHub logo" onerror="this.style.display='none'">
+        <a class="btn" href="https://github.com/Drinco-Mene" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.7.5.6 5.6.6 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.8-1.4-3.8-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6.7 1.8 1 .6 1 1.6.7 2 .5.1-.7.4-1.1.7-1.4-2.6-.3-5.2-1.3-5.2-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.3-1.6 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.6 5.5-5.2 5.8.4.4.7 1 .7 2v3c0 .3.2.6.8.5 4.6-1.6 7.9-5.8 7.9-10.9C23.4 5.6 18.3.5 12 .5z"/></svg>
           <span class="btn-text">💻 GitHub</span>
         </a>
 
-        <a class="btn" href="https://account.xbox.com/pt-BR/Profile?gamertag=DrincoMene" target="_blank" rel="noopener" aria-label="Xbox" data-key="xbox">
-          <img class="btn-icon" src="assets/xbox.png" alt="Xbox logo" onerror="this.style.display='none'">
+        <a class="btn" href="https://account.xbox.com/pt-BR/Profile?gamertag=DrincoMene" target="_blank" rel="noopener" aria-label="Xbox">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.3 6.5c-.5.2-1.9.9-3.3.3-1.4.6-2.8-.1-3.3-.3-.7.9-1.2 2.1-1.2 3.4 0 3.4 2.7 6.2 6 6.2s6-2.8 6-6.2c0-1.3-.5-2.6-1.2-3.4z"/></svg>
           <span class="btn-text">🎮 Xbox</span>
         </a>
 
-        <a class="btn" href="https://steamcommunity.com/id/DrincoMene/" target="_blank" rel="noopener" aria-label="Steam" data-key="steam">
-          <img class="btn-icon" src="assets/steam.png" alt="Steam logo" onerror="this.style.display='none'">
+        <a class="btn" href="https://steamcommunity.com/id/DrincoMene/" target="_blank" rel="noopener" aria-label="Steam">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path fill="currentColor" d="M22 10.5c0-1.7-1.3-3-3-3-1 0-1.9.5-2.5 1.2L13 8.9c-.1-.1-.3-.1-.4-.1-.2 0-.3.1-.4.2L6.6 13c-.8-.1-1.6.3-2 1-.6.9-.3 2 .6 2.5.5.3 1.1.4 1.6.2l4.6-2.1c.5.5 1.2.9 2 .9 1.8 0 3.3-1.5 3.3-3.3 0-.5-.1-1-.3-1.4l2.4-1.3c.5-.2.8-.7.8-1.2z"/></svg>
           <span class="btn-text">🕹️ Steam</span>
         </a>
 
-        <a class="btn" href="https://instagram.com/ka_uadasilva" target="_blank" rel="noopener" aria-label="Instagram" data-key="instagram">
-          <img class="btn-icon" src="assets/instagram.png" alt="Instagram logo" onerror="this.style.display='none'">
+        <a class="btn" href="https://instagram.com/ka_uadasilva" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.2A4.8 4.8 0 1016.8 13 4.8 4.8 0 0012 8.2zM18.8 6a1.2 1.2 0 11-1.2-1.2 1.2 1.2 0 011.2 1.2z"/></svg>
           <span class="btn-text">📸 Instagram</span>
         </a>
       </div>
 
       <footer class="foot">
-        <p>Preferências: 
+        <p>Preferências:
           <span class="chip lang active" data-lang="pt">Português 🇧🇷</span>
           <span class="chip lang" data-lang="en">English 🇺🇸</span>
         </p>
@@ -61,52 +69,88 @@
   </main>
 
   <script>
-    // Pequeno script para alternar idioma (pt/en)
-    (function(){
-      const translations = {
-        pt: {
-          name: 'Drinco-Mene',
-          role: 'Desenvolvedor • Criativo • Sempre aprendendo ✨',
-          bio: 'Olá! Aqui estão todas as minhas formas de contato. Clique nos botões — eles se mexem quando você passa o cursor 😊',
-          email: '📧 Email',
-          github: '💻 GitHub',
-          xbox: '🎮 Xbox',
-          steam: '🕹️ Steam',
-          instagram: '📸 Instagram',
-          footer: 'Feito com ❤️ — Drinco-Mene'
-        },
-        en: {
-          name: 'Drinco-Mene',
-          role: 'Developer • Creative • Always learning ✨',
-          bio: 'Hi! Here are my contact links. Click the buttons — they move when you hover 😊',
-          email: '📧 Email',
-          github: '💻 GitHub',
-          xbox: '🎮 Xbox',
-          steam: '🕹️ Steam',
-          instagram: '📸 Instagram',
-          footer: 'Made with ❤️ — Drinco-Mene'
-        }
-      };
+  (function(){
+    // Theme toggle + persistence
+    const btn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const stored = localStorage.getItem('drinco_theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-      function setLanguage(lang){
-        document.documentElement.lang = (lang === 'en') ? 'en' : 'pt-BR';
-        document.querySelectorAll('[data-key]').forEach(el => {
-          const key = el.getAttribute('data-key');
-          if(key && translations[lang] && translations[lang][key]){
-            el.textContent = translations[lang][key];
-          }
-        });
-        document.querySelectorAll('.chip.lang').forEach(ch => {
-          ch.classList.toggle('active', ch.getAttribute('data-lang') === lang);
-        });
-      }
+    function applyTheme(theme){
+      if(theme === 'light'){ root.setAttribute('data-theme','light'); }
+      else { root.removeAttribute('data-theme'); }
+      const sun = btn.querySelector('.icon-sun');
+      const moon = btn.querySelector('.icon-moon');
+      if(theme === 'light'){ sun.style.display='none'; moon.style.display='block'; }
+      else { sun.style.display='block'; moon.style.display='none'; }
+      try{ localStorage.setItem('drinco_theme', theme); }catch(e){}
+    }
 
-      document.querySelectorAll('.chip.lang').forEach(ch => {
-        ch.addEventListener('click', () => setLanguage(ch.getAttribute('data-lang')));
+    if(stored) applyTheme(stored);
+    else applyTheme(prefersDark ? 'dark' : 'light');
+
+    btn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const next = current === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+    });
+
+    // email copy utility
+    const emailBtn = document.querySelector('.btn[aria-label="Email"]');
+    if(emailBtn){
+      const emailValue = emailBtn.getAttribute('data-email') || 'seu-email@exemplo.com';
+      emailBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigator.clipboard?.writeText(emailValue).then(()=>{
+          const span = emailBtn.querySelector('.btn-text');
+          const prev = span.textContent;
+          span.textContent = '📧 Copiado!';
+          setTimeout(()=> span.textContent = prev, 1400);
+        }).catch(()=>{
+          // fallback: open mailto
+          window.location.href = 'mailto:'+emailValue;
+        });
       });
+    }
 
-      setLanguage('pt');
-    })();
+    // language toggle (keeps previous behavior)
+    const translations = {
+      pt: {
+        name: 'Drinco-Mene',
+        role: 'Desenvolvedor • Criativo • Sempre aprendendo ✨',
+        bio: 'Olá! Aqui estão todas as minhas formas de contato. Clique nos botões — eles se mexem quando você passa o cursor 😊',
+        email: '📧 Email',
+        github: '💻 GitHub',
+        xbox: '🎮 Xbox',
+        steam: '🕹️ Steam',
+        instagram: '📸 Instagram',
+        footer: 'Feito com ❤️ — Drinco-Mene'
+      },
+      en: {
+        name: 'Drinco-Mene',
+        role: 'Developer • Creative • Always learning ✨',
+        bio: 'Hi! Here are my contact links. Click the buttons — they move when you hover 😊',
+        email: '📧 Email',
+        github: '💻 GitHub',
+        xbox: '🎮 Xbox',
+        steam: '🕹️ Steam',
+        instagram: '📸 Instagram',
+        footer: 'Made with ❤️ — Drinco-Mene'
+      }
+    };
+
+    function setLanguage(lang){
+      document.documentElement.lang = (lang === 'en') ? 'en' : 'pt-BR';
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if(key && translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
+      });
+      document.querySelectorAll('.chip.lang').forEach(ch => ch.classList.toggle('active', ch.getAttribute('data-lang') === lang));
+    }
+
+    document.querySelectorAll('.chip.lang').forEach(ch => ch.addEventListener('click', () => setLanguage(ch.getAttribute('data-lang'))));
+    setLanguage('pt');
+  })();
   </script>
 </body>
 </html>
