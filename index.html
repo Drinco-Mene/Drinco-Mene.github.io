@@ -10,54 +10,96 @@
 <body>
   <main class="page">
     <section class="card">
-      <div class="avatar">😄</div>
-      <h1 class="name">Drinco-Mene</h1>
-      <p class="role">Desenvolvedor • Criativo • Sempre aprendendo ✨</p>
+      <div class="avatar">
+        <!-- Coloque sua foto em assets/avatar.jpg (ou substitua o src por uma URL pública) -->
+        <img class="avatar-img" src="assets/avatar.jpg" alt="Foto de Drinco-Mene" />
+      </div>
 
-      <p class="bio">
+      <h1 class="name" data-key="name">Drinco-Mene</h1>
+      <p class="role" data-key="role">Desenvolvedor • Criativo • Sempre aprendendo ✨</p>
+
+      <p class="bio" data-key="bio">
         Olá! Aqui estão todas as minhas formas de contato. Clique nos botões — eles se mexem quando você passa o cursor 😊
       </p>
 
       <div class="contacts">
-        <!-- Substitua hrefs/telefone/email pelas suas informações -->
-        <a class="btn" href="mailto:seu-email@exemplo.com" aria-label="Enviar e-mail">
-          📧 Email
-        </a>
+        <!-- Botões em linhas separadas; use os links que quiser -->
+        <a class="btn" href="mailto:seu-email@exemplo.com" aria-label="Enviar e-mail" data-key="email">📧 Email</a>
 
-        <a class="btn" href="tel:+5511999999999" aria-label="Ligar" >
-          📞 Telefone
-        </a>
+        <a class="btn" href="https://github.com/Drinco-Mene" target="_blank" rel="noopener" aria-label="GitHub" data-key="github">💻 GitHub</a>
 
-        <a class="btn" href="https://github.com/Drinco-Mene" target="_blank" rel="noopener" aria-label="GitHub">
-          💻 GitHub
-        </a>
+        <a class="btn" href="https://account.xbox.com/pt-BR/Profile?gamertag=DrincoMene" target="_blank" rel="noopener" aria-label="Xbox" data-key="xbox">🎮 Xbox</a>
 
-        <a class="btn" href="https://account.xbox.com/pt-BR/Profile?gamertag=DrincoMene" target="_blank" rel="noopener" aria-label="Xbox">
-          🎮 Xbox
-        </a>
+        <a class="btn" href="https://steamcommunity.com/id/DrincoMene/" target="_blank" rel="noopener" aria-label="Steam" data-key="steam">🕹️ Steam</a>
 
-        <a class="btn" href="https://steamcommunity.com/id/DrincoMene/" target="_blank" rel="noopener" aria-label="Steam">
-          🕹️ Steam
-        </a>
+        <a class="btn" href="https://instagram.com/ka_uadasilva" target="_blank" rel="noopener" aria-label="Instagram" data-key="instagram">📸 Instagram</a>
 
-        <a class="btn" href="https://instagram.com/ka_uadasilva" target="_blank" rel="noopener" aria-label="Instagram">
-          📸 Instagram
-        </a>
-
-        <a class="btn" href="https://myaccount.ea.com/" target="_blank" rel="noopener" aria-label="EA">
-          ⚡ EA
-        </a>
-
-        <a class="btn btn-ghost" href="#" aria-label="Baixar currículo (placeholder)">
-          📄 Currículo
-        </a>
+        <a class="btn" href="https://myaccount.ea.com/" target="_blank" rel="noopener" aria-label="EA" data-key="ea">⚡ EA</a>
       </div>
 
       <footer class="foot">
-        <p>Preferências: <span class="chip">Português 🇧🇷</span> <span class="chip">Freelance ✍️</span></p>
-        <p class="small">Feito com ❤️ — Drinco-Mene</p>
+        <p>Preferências: 
+          <span class="chip lang active" data-lang="pt">Português 🇧🇷</span>
+          <span class="chip lang" data-lang="en">English 🇺🇸</span>
+        </p>
+        <p class="small" data-key="footer">Feito com ❤️ — Drinco-Mene</p>
       </footer>
     </section>
   </main>
+
+  <script>
+    // Pequeno script para alternar idioma (pt/en) alterando textos visíveis
+    (function(){
+      const translations = {
+        pt: {
+          name: 'Drinco-Mene',
+          role: 'Desenvolvedor • Criativo • Sempre aprendendo ✨',
+          bio: 'Olá! Aqui estão todas as minhas formas de contato. Clique nos botões — eles se mexem quando você passa o cursor 😊',
+          email: '📧 Email',
+          github: '💻 GitHub',
+          xbox: '🎮 Xbox',
+          steam: '🕹️ Steam',
+          instagram: '📸 Instagram',
+          ea: '⚡ EA',
+          footer: 'Feito com ❤️ — Drinco-Mene'
+        },
+        en: {
+          name: 'Drinco-Mene',
+          role: 'Developer • Creative • Always learning ✨',
+          bio: 'Hi! Here are my contact links. Click the buttons — they move when you hover 😊',
+          email: '📧 Email',
+          github: '💻 GitHub',
+          xbox: '🎮 Xbox',
+          steam: '🕹️ Steam',
+          instagram: '📸 Instagram',
+          ea: '⚡ EA',
+          footer: 'Made with ❤️ — Drinco-Mene'
+        }
+      };
+
+      function setLanguage(lang){
+        document.documentElement.lang = (lang === 'en') ? 'en' : 'pt-BR';
+        // update elements with data-key
+        document.querySelectorAll('[data-key]').forEach(el => {
+          const key = el.getAttribute('data-key');
+          if(key && translations[lang] && translations[lang][key]){
+            el.textContent = translations[lang][key];
+          }
+        });
+        // toggle active class on chips
+        document.querySelectorAll('.chip.lang').forEach(ch => {
+          ch.classList.toggle('active', ch.getAttribute('data-lang') === lang);
+        });
+      }
+
+      // attach click handlers
+      document.querySelectorAll('.chip.lang').forEach(ch => {
+        ch.addEventListener('click', () => setLanguage(ch.getAttribute('data-lang')));
+      });
+
+      // default language pt
+      setLanguage('pt');
+    })();
+  </script>
 </body>
 </html>
