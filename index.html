@@ -31,21 +31,13 @@
         Olá! Aqui estão todas as minhas formas de contato. Clique nos botões — eles se mexem quando você passa o cursor 😊
       </p>
 
-      <div class="contacts" id="contacts">
-        <a class="btn" href="#" aria-label="Email" data-email="seu-email@exemplo.com">
+      <div class="contacts">
+        <a class="btn" href="mailto:drincomene@gmail.com" aria-label="Email">
           <span class="btn-text">📧 Email</span>
         </a>
 
         <a class="btn" href="https://github.com/Drinco-Mene" target="_blank" rel="noopener" aria-label="GitHub">
           <span class="btn-text">💻 GitHub</span>
-        </a>
-
-        <a class="btn" href="#" target="_blank" rel="noopener" aria-label="Discord" data-discord="https://discord.gg/replace-me">
-          <span class="btn-text">💬 Discord</span>
-        </a>
-
-        <a class="btn" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <span class="btn-text">📱 WhatsApp</span>
         </a>
 
         <a class="btn" href="https://account.xbox.com/pt-BR/Profile?gamertag=DrincoMene" target="_blank" rel="noopener" aria-label="Xbox">
@@ -121,24 +113,6 @@
       page.style.setProperty('--blob-y2', (y * -0.6) + 'px');
     }
     window.addEventListener('mousemove', onMove);
-
-    // email copy utility
-    const emailBtn = document.querySelector('.btn[aria-label="Email"]');
-    if(emailBtn){
-      const emailValue = emailBtn.getAttribute('data-email') || 'seu-email@exemplo.com';
-      emailBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        navigator.clipboard?.writeText(emailValue).then(()=>{
-          const span = emailBtn.querySelector('.btn-text');
-          const prev = span.textContent;
-          span.textContent = '📧 Copiado!';
-          setTimeout(()=> span.textContent = prev, 1400);
-        }).catch(()=>{
-          // fallback: open mailto
-          window.location.href = 'mailto:'+emailValue;
-        });
-      });
-    }
 
     // language toggle (keeps previous behavior)
     const translations = {
